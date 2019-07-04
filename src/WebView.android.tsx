@@ -197,6 +197,8 @@ class WebView extends React.Component<AndroidWebViewProps, State> {
     if (onLoadProgress) {
       onLoadProgress(event);
     }
+    // @ts-ignore
+    this.updateNavigationState(event);
   };
 
   onShouldStartLoadWithRequestCallback = (
