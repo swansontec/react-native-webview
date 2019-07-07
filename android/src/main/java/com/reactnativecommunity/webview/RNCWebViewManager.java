@@ -945,6 +945,7 @@ public class RNCWebViewManager extends SimpleViewManager<WebView> {
       }
       WritableMap event = Arguments.createMap();
       event.putDouble("target", webView.getId());
+      event.putString("url", webView.getUrl());
       event.putString("title", webView.getTitle());
       event.putString("url", url);
       event.putBoolean("canGoBack", webView.canGoBack());
