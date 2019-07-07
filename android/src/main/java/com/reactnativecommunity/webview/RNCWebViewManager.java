@@ -723,6 +723,7 @@ public class RNCWebViewManager extends SimpleViewManager<WebView> {
       super.onProgressChanged(webView, newProgress);
       WritableMap event = Arguments.createMap();
       event.putDouble("target", webView.getId());
+      event.putString("url", webView.getUrl());
       event.putString("title", webView.getTitle());
       event.putBoolean("canGoBack", webView.canGoBack());
       event.putBoolean("canGoForward", webView.canGoForward());
